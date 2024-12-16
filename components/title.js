@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 
-const Title = () => {
+const Title = ({titleText}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Quizzer</Text>
+      <Text style={styles.title}>{titleText}</Text>
     </View>
   );
 };
@@ -13,12 +13,12 @@ export default Title;
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 30,
+    fontSize: 36,
     fontWeight: '600',
   },
-  container:{
+  container: {
     paddingVertical: 16,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
 });

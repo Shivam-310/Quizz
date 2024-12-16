@@ -1,18 +1,23 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Title from '../components/title';
 
 const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Title />
+      <Title titleText='QUIZZLER' />
       <View style={styles.bannerContainer}>
-        <Image source={require ('../components/quiz.png')} 
+        <Image
+          source={{
+            uri: 'https://cdni.iconscout.com/illustration/premium/thumb/giving-different-feedback-and-review-in-websites-2112230-1779230.png',
+          }}
           style={styles.banner}
-          resizeMode='contain'
-          />
+          resizeMode="contain"
+        />
       </View>
-      <TouchableOpacity onPress={()=>navigation.navigate("Quiz")} style={styles.button}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Quiz')}
+        style={styles.button}>
         <Text style={styles.buttonText}>Start</Text>
       </TouchableOpacity>
     </View>
@@ -22,7 +27,7 @@ const Home = ({navigation}) => {
 export default Home;
 
 const styles = StyleSheet.create({
-  banner:{
+  banner: {
     height: 300,
     width: 300,
   },
@@ -31,12 +36,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
   },
-  container:{
+  container: {
     paddingTop: 40,
     paddingHorizontal: 20,
     height: '100%',
   },
-  button:{
+  button: {
     width: '100%',
     backgroundColor: '#1A759F',
     padding: 16,
@@ -44,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 30,
   },
-  buttonText:{
+  buttonText: {
     fontSize: 24,
     fontWeight: '600',
     color: 'white',
